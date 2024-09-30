@@ -8,9 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Afiliado extends Model
 {
     use HasFactory;
-    protected $filable = ['name', 'email', 'cliente_id'];
+    protected $fillable = ['name', 'email', 'cliente_id'];
 
-    public function clientes()
+    public function cliente()
     {
         return $this->belongsTo(Cliente::class);
     }

@@ -10,11 +10,14 @@ class Cliente extends Model
 {
     use HasFactory;
     protected $guarded = [];
-    public function mienbros()
+
+    public function members()
     {
-    return $this->belongsToMany(User::class, 'cliente_user', 'cliente_id', 'user_id');    
+        return $this->belongsToMany(User::class, 'cliente_user', 'cliente_id', 'user_id');    
     }
-    public function afiliados(){
+
+    public function afiliados()
+    {
         return $this->hasMany(Afiliado::class);
     }
 }
