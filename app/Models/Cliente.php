@@ -20,4 +20,13 @@ class Cliente extends Model
     {
         return $this->hasMany(Afiliado::class);
     }
+
+    public function tipoNovedades()
+    {
+        return $this->hasMany(TipoNovedad::class);
+    }
+
+    public function novedades() {
+        return $this->hasMany(Novedad::class);
+    }
 }

@@ -14,4 +14,9 @@ class Afiliado extends Model
     {
         return $this->belongsTo(Cliente::class);
     }
+
+    public function novedades()
+    {
+        return $this->hasMany(Novedad::class);
+    }
 }
